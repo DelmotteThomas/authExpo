@@ -2,8 +2,8 @@ import "react-native-reanimated";
 import { useAuth, AuthProvider } from "../contexts/AuthContext";
 import { useSegments, router, Stack } from "expo-router";
 import { useEffect } from "react";
-import { ActivityIndicator } from "react-native";
-import { View } from "react-native";
+import { ActivityIndicator , View } from "react-native";
+
 
 function RootLayoutNav() {
   const { user, isLoading } = useAuth();
@@ -36,4 +36,10 @@ function RootLayoutNav() {
   );
 }
 
-export default function RootLayout() {}
+export default function RootLayout() {
+  return (
+    <AuthProvider>
+      <RootLayoutNav />
+    </AuthProvider>
+  );
+}
