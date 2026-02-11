@@ -69,4 +69,10 @@ export const styles = StyleSheet.create({
         color : colors.accent,
         ...typography.subtitle,
     },
+    buttonDisabled : {
+        backgroundColor : colors.textMuted,
+        borderRadius: spacing.sm,
+        opacity : 0.7,
+
+}
 })
