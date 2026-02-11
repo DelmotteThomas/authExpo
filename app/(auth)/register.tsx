@@ -22,7 +22,7 @@ export default function registerScreen() {
   const { register } = useAuth();
 
   const handleRegister = async () => {
-    if (!email || !password || confirm) {
+    if (!email || !password || !confirm) {
       Alert.alert("Erreur", "Veuillez remplir tous les champs");
       return;
     }
@@ -95,7 +95,7 @@ export default function registerScreen() {
             {isLoading ? (
               <ActivityIndicator color={colors.lightAccent}></ActivityIndicator>
             ) : (
-              <Text style={styles.buttonText}>s'inscrire</Text>
+              <Text style={styles.buttonText}>S'inscrire</Text>
             )}
           </TouchableOpacity>
         </View>

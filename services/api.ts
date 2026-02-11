@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = "http://mobiletechnocite-backnode-kjgflm-ad0f22-185-166-39-249.traefik.me/api";
 
 class ApiService {
   private token: string | null = null;
