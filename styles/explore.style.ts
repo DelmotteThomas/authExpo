@@ -73,6 +73,12 @@ export const styles = StyleSheet.create({
         position:'relative',
         marginBottom:spacing.sm,
     
+    },
+    avatarImage:{
+        width:96,
+        height:96,
+        borderRadius:48,
+
     }
         
 
