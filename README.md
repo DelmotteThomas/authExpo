@@ -48,3 +48,20 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+## Build l'application : 
+
+ ``bash
+   - npx eas-cli login 
+```
+
+
+
+
+Se connecter avec les identifiants d'expo ( expo.dev)
+
+il va ajouter dans notre config un projetID lié avec expo
+puis npx eas init
+
+⚠️ Ici 1 compte = 1 token , mais il serait préférable d'avoir plusieurs token en fonction de l'os utilisé par exemple 1 pour l'iphone 1pour la tablette etc

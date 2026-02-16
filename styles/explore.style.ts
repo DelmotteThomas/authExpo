@@ -4,6 +4,7 @@ import {colors} from './colors'
 import { typography } from "./typography";
 
 
+
 export const styles = StyleSheet.create({
 
     container:{
@@ -79,7 +80,34 @@ export const styles = StyleSheet.create({
         height:96,
         borderRadius:48,
 
-    }
+    },
+    sectionTitle:{
+        ...typography.subtitle,
+        color:colors.secondary,
+        textAlign:'center',
+        textTransform: 'uppercase',
+        paddingHorizontal: spacing.md,
+        paddingTop:spacing.md,
+        paddingBottom:spacing.sm,
+
+    },
+    sectionText:{
+        ...typography.subtitle,
+        alignItems:'center',
+        justifyContent:'center',
+        textAlign:'center',
+
+    },
+    sectionItem:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        paddingHorizontal:spacing.md,
+        paddingVertical:spacing.sm,
+        borderBottomWidth:1,
+        borderBottomColor:colors.border,
+        gap:spacing.sm,
+    },
         
 
 });

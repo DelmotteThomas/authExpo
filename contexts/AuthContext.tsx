@@ -50,13 +50,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const login = async (email: string, password: string) => {
+    try{
     const response = await api.login(email, password);
 
     await AsyncStorage.setItem("token", response.token);
-    await AsyncStorage.setItem("token", JSON.stringify(response.user));
+    await AsyncStorage.setItem("user", JSON.stringify(response.user));
     api.setToken(response.token);
     setToken(response.token);
     setUser(response.user);
+    }catch(error){
+
+    console.log("Erreur login", error);
+    throw error;
+  }
   };
 
   const register = async (email: string, password: string) => {
@@ -67,6 +73,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     api.setToken(response.token);
     setToken(response.token);
     setUser(response.user);
+  
   };
 
   const logout = async () => {
